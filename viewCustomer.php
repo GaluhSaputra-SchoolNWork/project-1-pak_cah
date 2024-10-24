@@ -9,32 +9,32 @@
 </head>
 <body class="p-5">
 
-<h1 style="text-align: center;">Customer Profile</h1><br>
+    <h1 style="text-align: center;">Customer Profile</h1><br>
     
-    <div class="mb-3 border border-black rounded">
-    <form method="POST" action="" class="p-5">
-        <label for="stok">Nama:</label>
-        <input class="form-control border-black" type="text" id="namaCust" name="namaCust" required><br>
+        <div class="mb-3 border border-black rounded">
+            <form method="POST" action="" class="p-5">
+                <label for="stok">Nama:</label>
+                <input class="form-control border-black" type="text" id="namaCust" name="namaCust" required><br>
 
-        <label for="stok">Alamat:</label>
-        <input class="form-control border-black" type="text" id="alamat" name="alamat" required><br>
+                <label for="stok">Alamat:</label>
+                <input class="form-control border-black" type="text" id="alamat" name="alamat" required><br>
 
-        <label for="stok">No HP:</label>
-        <input class="form-control border-black" type="tel" id="noHP" name="noHP" required><br>
+                <label for="stok">No HP:</label>
+                <input class="form-control border-black" type="tel" id="noHP" name="noHP" required><br>
 
-        <label for="pembelian">ID:</label>
-        <input class="form-control border-black" type="number" id="idCust" name="idCust" required><br><br>
+                <label for="pembelian">ID:</label>
+                <input class="form-control border-black" type="number" id="idCust" name="idCust" required><br><br>
 
-        <input class="btn btn-dark" type="submit" value="Lihat Profile">
-    </form>
-    </div>
+                <input class="btn btn-dark" type="submit" value="Lihat Profile">
+            </form>
+        </div>
 
     <?php if ($Profile !== null):?>
         <div class="card border border-black" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title"><?php echo ($panggilCustomer->namaCustomer); ?></h5>
-                    <h6 class="card-subtitle mb-2 text-body-secondary"><?php echo ($panggilCustomer->idCustomer); ?></h6>
-                    <p class="card-text"><?php echo ($panggilCustomer->nomorHPCustomer) . '<br>' . ($panggilCustomer->alamatCustomer); ?></p>
+                <h6 class="card-subtitle mb-2 text-body-secondary"><?php echo ($panggilCustomer->idCustomer); ?></h6>
+                <p class="card-text"><?php echo ($panggilCustomer->nomorHPCustomer) . '<br>' . ($panggilCustomer->alamatCustomer); ?></p>
             </div>
         </div>
     <?php endif;?>
